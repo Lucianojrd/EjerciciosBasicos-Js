@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <!--
     <script>
         /*--Ejercicio 1 Introduccion
         document.write('Luciano');
@@ -324,7 +325,7 @@
 
     */  
 
-/*Ejercicio WINDOW */
+/* Ejercicio WINDOW  */ 
     document.addEventListener("DOMContentLoaded", function() {
       var boton = document.getElementById("boton");
       function abrirVentana() {
@@ -334,8 +335,85 @@
         nuevaVentana.document.write("<h1>Hola, esta es una nueva ventana</h1>");
       }
       boton.addEventListener("click", abrirVentana);
+
     });
-  </script>
-  <button id="boton">Abrir nueva ventana</button>
+
+  
+</script>
+ <button id="boton">Abrir nueva ventana</button>
+-->
+    <!-- 
+<script>
+    
+    function suma() {
+        this.valor1 = 0;
+        this.valor2 = 0;
+        this.cargarValor1=cargarValor1;
+        this.cargarValor2=cargarValor2;
+        this.retornarResultado=retornarResultado;
+    }
+
+    function cargarValor1(valor1) {
+        this.valor1=valor1;
+    }
+   
+    function cargarValor2(valor2) {
+        this.valor2=valor2;
+    }
+
+    function retornarResultado() {
+        return this.valor1 + this.valor2;
+    }
+
+
+    let s = new suma();
+
+    s.cargarValor1(10);
+
+    s.cargarValor2(20);
+
+    document.write(s.retornarResultado());
+
+</script>
+-->
+<!--
+    <script>
+        function Persona() {
+            this.nombre = '';
+            this.edad = 0;
+            this.cargarnombre = cargarnombre;
+            this.cargaredad = cargaredad;
+        }
+        function cargarnombre() {
+            this.nombre =prompt("Ingresa un nombre");
+        }
+        function cargaredad() {
+            this.edad = parseInt(prompt("Ingresa la edad"));
+        }
+
+
+        let vector = new Array(4);
+        for (let f = 0; f < vector.length; f++) {
+            vector[f] = new Persona();
+            vector[f].cargarnombre();
+            vector[f].cargaredad();
+        }
+        var mayor= 0;
+        var iguales=0;
+        for (let f = 0; f < vector.length; f++) {
+            if (vector[f].edad > mayor) {
+                mayor = vector[f].edad; 
+            }
+            if ( mayor == vector[f].edad ) {
+                iguales=iguales+1; 
+            }
+        }
+        document.write("La edad mayor es "+ mayor);
+        
+        document.write("</br> " + iguales +  " Personas tienen la mayor edad");
+    
+    </script>
+ -->
 </body>
+
 </html>
